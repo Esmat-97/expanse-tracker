@@ -1,4 +1,4 @@
-<!-- <ion-header [translucent]="true">
+ <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>showexpanses</ion-title>
   </ion-toolbar>
@@ -12,8 +12,8 @@
   <div class="col" *ngFor="let x of comming; let i = index">
     <div class="card">
       <div class="card-body">
-        <span class="card-text">{{x.description}}</span>
-        <ion-button  fill="solid" (click)="del(x.id)" >delete</ion-button>
+        <div class="card-text">{{x.description}}</div>
+        <div class="card-text">{{x.amount}}</div>
 
 
       </div>
@@ -21,5 +21,5 @@
   </div>
 
 
-</div> -->
+</div> 
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TasksService } from '../services/tasks.service';
 
 @Component({
   selector: 'app-showexpanses',
@@ -7,17 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowexpansesPage  {
 
-  constructor() { }
+  constructor(private task:TasksService) { }
 
-  // ngOnInit(){
-  //   this.id=localStorage.getItem('id')  as string ;
-  //       this.htp.gettasks(this.id).subscribe( (res :any) =>{
-  //         this.comming=res.tasks
-  //   console.log(this.comming)
+  comming:any=[];
+ id:string='';
+
+  ngOnInit(){
+    this.id=localStorage.getItem('id')  as string ;
+        this.task.gettasks(this.id).subscribe( (res :any) =>{
+          this.comming=res
+    console.log(this.comming)
     
-  //       })
+        })
     
-  //     }
+      }
 
 
 

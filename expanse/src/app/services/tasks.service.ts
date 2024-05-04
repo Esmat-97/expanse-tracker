@@ -15,7 +15,7 @@ export class TasksService {
 
   gettasks(user_id:any) :Observable<any[]>{
     console.log(`${user_id}`)
-return this.http.get<any[]>(`${HOST_NAME}/api/tasks/${user_id}`)
+return this.http.get<any[]>(`${HOST_NAME}/api/expense/select/${user_id}`)
   }
 
 
@@ -23,7 +23,7 @@ return this.http.get<any[]>(`${HOST_NAME}/api/tasks/${user_id}`)
 
 deltasks(id:any) :Observable<any>{
   console.log(id)
-return this.http.delete<any>(`${HOST_NAME}/api/tasks/${id}`)
+return this.http.delete<any>(`${HOST_NAME}/api/expense/${id}`)
 }
 
 
@@ -33,7 +33,7 @@ return this.http.delete<any>(`${HOST_NAME}/api/tasks/${id}`)
 
   inserttasks(main:any) :Observable<any>{
 console.log(main)
- return this.http.post<any>(`${HOST_NAME}/api/expense`,main)
+ return this.http.post<any>(`${HOST_NAME}/api/expense/`,main)
       }
 
 
