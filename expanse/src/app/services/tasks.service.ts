@@ -37,5 +37,13 @@ console.log(main)
       }
 
 
+      /*   */
+
+
+      countAmount(user_id:any) :Observable<any[]>{
+        console.log(`${user_id}`)
+    return this.http.get<any[]>(`${HOST_NAME}/api/expense/countAmount/${user_id}`)
+      }
+
 
 }

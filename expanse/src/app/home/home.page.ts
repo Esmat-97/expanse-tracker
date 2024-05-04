@@ -31,11 +31,7 @@ export class HomePage {
 
   ngOnInit(){
 this.id=localStorage.getItem('id')  as string ;
-    this.htp.gettasks(this.id).subscribe( (res :any) =>{
-      this.comming=res.tasks
-console.log(this.comming)
 
-    })
 
   }
 
