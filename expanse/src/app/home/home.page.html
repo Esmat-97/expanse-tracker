@@ -1,12 +1,17 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      Add expense
     </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button routerLink="/main"> </ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-
+<br>
+<br>
+<br>
 
 <ion-content>
 
@@ -16,19 +21,15 @@
       <ion-col size="10" id="a" >
 
 
-  <ion-list>
-
-    <ion-item>
+  
       <form #main="ngForm" (ngSubmit)="formdata(main)" >
-<ion-input type="text" fill="solid"  name="description" #description="ngModel" ngModel></ion-input>
+<ion-input type="text" class="input"  name="description" placeholder="write description" #description="ngModel" ngModel></ion-input>
+<ion-input type="text" class="input"  name="amount"  placeholder="write amount" #description="ngModel" ngModel></ion-input>
 <input type="hidden" fill="solid"  [(ngModel)]="id" name="user_id" >
 <ion-button type="submit" fill="solid" >Add</ion-button>
       </form>
 
-   </ion-item >
-         
-  
-</ion-list>
+
 
          </ion-col>
       </ion-row>  

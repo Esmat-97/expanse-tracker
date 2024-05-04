@@ -22,15 +22,15 @@ export class LoginPage  {
 formdata(main:any){
 console.log(main.value)
 this.http.login(main.value).subscribe(res=>{
-  this.person=res;
-
-console.log(this.person)
+ 
+console.log(this.person=res.user)
 
 localStorage.setItem('name',this.person.name)
 localStorage.setItem('mail',this.person.email)
 localStorage.setItem('id',this.person.id)
+localStorage.setItem('token',res.token)
 
-this.route.navigate(['/home'])
+this.route.navigate(['/main'])
 })
 
 }

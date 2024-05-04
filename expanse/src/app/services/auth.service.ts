@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpHeaders } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { HOST_NAME } from './constant';
@@ -27,4 +28,14 @@ return this.http.post<any>(`${HOST_NAME}/api/register`,main)
 console.log(main)
  return this.http.post<any>(`${HOST_NAME}/api/login`,main)
       }
+
+
+
+      /*    */
+
+
+      logout(headers: HttpHeaders) :Observable<any>{
+        console.log(headers)
+         return this.http.post<any>(`${HOST_NAME}/api/logout`, {}, { headers })
+              }
 }

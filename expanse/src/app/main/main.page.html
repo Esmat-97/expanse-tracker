@@ -1,13 +1,37 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>main</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">main</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="header">
+    <div>
+<h1> hello</h1>
+<strong> {{name}}</strong>
+    </div>
+
+  <ion-button color="light"  routerLink="/logout">
+    <ion-icon slot="icon-only" color="danger" name="log-out" > </ion-icon>
+</ion-button>
+
+  </div>  
+
+  <div class="summary">
+<strong>your total expense</strong>
+<h1>2000</h1>
+  </div>
+
+
+  <div id="container">
+
+    <div routerLink="/showexpanses">
+<ion-icon name="list"></ion-icon>
+<strong>view Expense</strong>
+  </div>
+
+
+  <div routerLink="/home">
+<ion-icon name="add"></ion-icon>
+<strong>Add Expense</strong>
+</div>
+
+</div>
+ 
 </ion-content>
+

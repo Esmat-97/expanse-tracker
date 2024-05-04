@@ -33,7 +33,7 @@ return this.http.delete<any>(`${HOST_NAME}/api/tasks/${id}`)
 
   inserttasks(main:any) :Observable<any>{
 console.log(main)
- return this.http.post<any>(`${HOST_NAME}/api/tasks`,main)
+ return this.http.post<any>(`${HOST_NAME}/api/expense`,main)
       }
 
 
