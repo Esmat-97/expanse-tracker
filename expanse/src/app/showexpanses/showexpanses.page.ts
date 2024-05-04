@@ -26,13 +26,13 @@ export class ShowexpansesPage  {
 
 
 
-  /*   */
+  // /*   */
 
-  // del(id:any){
-  //   this.htp.deltasks(id).subscribe(res=>{
+   del(id:any){
+    this.task.deltasks(id).subscribe(res=>{
     
-  //   })
-  //     }
+    })
+      }
 
 
 }
